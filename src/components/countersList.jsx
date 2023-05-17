@@ -16,17 +16,15 @@ const CountersList = () =>{
         const newCounters = counters.filter((c)=> c.id!== id);
         setCounters(newCounters);
     };
-    const handleReset = () =>{
+    const handleReset = ( ) =>{
         setCounters(initialState);   
     };
-   const handleIncrement = () =>{
-        const increaseCounters = counters.value +1;
-        setCounters(increaseCounters);
+   const handleIncrement = (id) =>{
+    setCounters(counters => counters.map(c => c.id===id ? {...c, value: c.value + 1}: c));
         };
     
-        const handleDecrement = () =>{
-            const decreaseCounters =  counters.value(counters.value -=1);
-            setCounters(decreaseCounters);   
+        const handleDecrement = (id) =>{
+            setCounters(counters => counters.map(c => c.id===id ? {...c, value: c.value - 1}: c));   
         };
 
     

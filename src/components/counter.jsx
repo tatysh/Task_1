@@ -23,11 +23,11 @@ const Counter=(props)=>{
             <span className = {getBageClasses()}>{formatValue()}
             </span>
             
-            <button className = 'btn btn-primary btn-cm m-2' onClick={()=>props.onIncrement(props.value)}>
+            <button className = 'btn btn-primary btn-cm m-2' onClick={()=>props.onIncrement(props.id)}>
                 +
             </button>
             
-            <button className = 'btn btn-primary btn-cm m-2' onClick={()=>props.onDecrement(props.value)}>
+            <button className = 'btn btn-primary btn-cm m-2' onClick={()=>props.onDecrement(props.id)}>
                 -
             </button>
             <button className = 'btn btn-danger btn-cm m-2' onClick={()=>props.onDelet(props.id)}>
